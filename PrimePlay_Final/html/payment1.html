@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- css file  -->
+    <link rel="stylesheet" href="../css/payment.css">
+    <!-- css file ends  -->
+    <title>Prime Play</title>
+</head>
+    <script type="text/javascript">
+                  function Validation(True)
+                  {
+                  var error = document.getElementById("error");
+                  var cname = document.getElementById("cname").value;
+                  var cnumber = document.getElementById("ccnum").value;
+                  var expyear = parseInt(document.getElementById("expyear").value);
+                  var expmonth = parseInt(document.getElementById("expmonth").value);
+                  var cvv = document.getElementById("cvv").value;
+                  var confirmbutton=document.getElementById("confirm");      
+        
+//        error.innerHTML = "Please Fill All Required Details";
+//                
+        if(cname === "" || cnumber === "" || expyear === ""|| expmonth === ""||cvv === "")
+        {
+        error.innerHTML = "Please Fill All Required Details";
+        return false
+        }
+        else if(cname.length < 5){
+            error.innerHTML = "Please Enter Full Name";return false;}
+        else if(cnumber.length !== 16){
+            error.innerHTML = "Please Enter Valid Card Number";return false;}
+        else if(expmonth < 1 || expmonth >12  ){
+            error.innerHTML = "Please Enter Valid Expiry Month";return false;}
+        else if(expyear < 2021 || expyear > 2040  ){
+            error.innerHTML = "Please Enter Valid Expiry Year";return false;}
+         else if(cvv.length !==3  ){
+            error.innerHTML = "Please Enter Valid 3 digit CVV";return false;}
+        else{
+            error.innerHTML = "All Ok";
+            window.open("../html/Successful.html",'_self');
+        }           
+    }
+              </script>
+<body>      
+
+  <div class="container">
+    <div class="top-left"><span class="prime">Prime</span><span class="play">Play</span></div>
+  </div>
+  
+    <div class="title">
+        <h1>Payment Methods</h1>
+    </div>
+        <div class="container" style="max-width: 50%;">
+          <p class="textdots">.</p>
+            <h3>Plan Selected : Rs.199/month</h3>
+          <div id="error" style="height:10px; color: red" ></div>
+          <form action="/action_page.php" >
+          
+            <div class="row">
+              <div class="col-50">
+               
+    
+              <div class="col-50">
+               
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy;"></i>
+                  <i class="fa fa-cc-amex" style="color:blue;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                  <i class="fa fa-cc-discover" style="color:orange;"></i>
+                </div>
+                
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="eg - Sherlock Holmes"  >
+                <label for="ccnum">Credit card number</label>
+                <input type="text" required id="ccnum" name="cardnumber" placeholder="eg - 1111222233334444" >
+                <label for="expmonth">Exp Month</label>
+                <input type="text" required id="expmonth" name="expmonth" placeholder="eg - 05" >
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" required id="expyear" name="expyear" placeholder="eg - 2022" >
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="password" class="cvv" required id="cvv" name="cvv" placeholder="eg - 352" >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+           <p class="button-space"></p>
+<!--          <button type="button" onclick="location.href='../html/Successful.html'" onClick="Validation()"  class="btn btn-lg" >CONFIRM</button>-->
+          <button type="button" id="confirm"  class="btn btn-lg" onclick="Validation()"; >CHECK</button>
+    
+          
+             
+          </form>
+          <!-- <div class="egdots">.</div> -->
+        </div>
+        <div class="egdots">.</div>
+    </body>
+</html>

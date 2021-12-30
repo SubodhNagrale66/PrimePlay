@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
+
+
+
+
+body {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 17px;
+    /* padding: 8px; */
+    margin-top: 5%;
+    margin-left: 30%;
+    background-image: linear-gradient(to right, #41b3a3, #85dcb8);
+    background-size: cover no-repeat;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    /* padding: 5px 20px 15px 20px; */
+    /* border: 1px solid lightgrey; */
+    /* border-radius: 3px; */
+    /* padding: 5px 20px 15px 20px; */
+    /* padding-bottom: 5%; */
+  }
+
+  h3 {
+    margin-top: 5%;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .textdots {
+    color: #ccc;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background: #3498db;
+    border: 1px solid #2691d9;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    /* text-align: center; */
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif;
+    padding: 2%;
+    margin-left: 5%;
+    padding-left: 40%;
+    padding-right: 39%;
+    
+  }
+  
+  .btn:hover {
+    background: #2691d9;
+  }
+  
+  a {
+    color: #2196F3;
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+   @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+
+  label {
+      margin-top: 2%;
+  }
+
+  form {
+      margin-bottom: 5%;
+      margin-top: 5%;
+  }
+
+button {
+    margin-top: 2%;
+}
+
+h3{
+    text-align: center;
+}
+
+.buttonFinal{
+    display: none;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: white;
+  font-weight: 600;
+  font-size: 45px;
+  top: 25px;
+  left: 25px;
+}
+
+.prime {
+  color:  #A7EEC9;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 4px;
+}
+
+.play {
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 4px;
+
+}
+
+#error {
+  margin-left: 2%;
+}
+
+.cvv {
+  padding: 12px;
+  border: 1px solid #ccc;
+  /* padding-left: 5%; */
+  /* margin: 0 0 20px; */
+  width: 100%;
+}
+
+.egdots {
+  color: #ccc;
+  padding-bottom: 1% ;
+}
+
+.successful {
+  text-align: left;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-right: 20% ;
+}
